@@ -27,17 +27,6 @@ int print_c(va_list args)
  */
 int print_s(va_list args)
 {
-	char *str = va_arg(args, char *);
-	int count = 0;
-
-	if (!str)
-		str "(null)";
-
-	while (str[count] != '\0')
-		count += _putchar(str[count]);
-
-	return (count);
-	/**
         int index = 0, count = 0;
         char *str;
 
@@ -54,7 +43,6 @@ int print_s(va_list args)
         }
 
         return (count);
-	*/
 }
 
 /**
