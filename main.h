@@ -28,6 +28,11 @@ int print_b(va_list args);
 int print_u(va_list args);
 int print_o(va_list args);
 int print_x(va_list args);
+void print_lowerHex(unsigned int num, int *count);
 int print_X(va_list args);
-
+void print_upperHex(unsigned int num, int *count);
+int countDigits(unsigned int num);
+int countOctal(unsigned int num);
+int countBinary(unsigned int num);
+int print_number(unsigned int n);
 #endif
