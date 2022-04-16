@@ -2,6 +2,7 @@
 #define MAIN_H
 
 #include <stdarg.h>
+#include <stddef.h>
 /**
  * struct specifier - struct specifier.
  *
