@@ -1,53 +1,54 @@
+#include <stdarg.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
-
+#include <stddef.h>
 /**
- * _printf - prints formatted data to stdout.
+ * _printf - Recreates the printf function.
  *
- * @format: string that contains the format to print
- * @...: length of character argument.
+ * @format: String with format specifier.
+ * @...: The number of arguments.
  *
- * Return: number of characters written
+ * Return: Number of characters printed
  */
-int _printf(char *format, ...)
+int _printf(const char *format, ...)
 {
-	int written = 0, (*structype)(char *, va_list);
-	char q[3];
-	va_list pa;
-
-	if (format == NULL)
-		return (-1);
-	q[2] = '\0';
-	va_start(pa, format);
-	_putchar(-1);
-	while (format[0])
+	if (format != NULL)
 	{
-		if (format[0] == '%')
+		int count = 0, index = 0;
+		int (*variadic)(va_list);
+		va_list args;
+
+		va_start(args, format);
+		if (format[0] == '%' && format[1] == '\0')
+			return (-1);
+		while (format != NULL && format[index] != '\0')
 		{
-			structype = driver(format);
-			if (structype)
+			if (format[index] == '%')
 			{
-				q[0] = '%';
-				q[1] = format[1];
-				written += structype(q, pa);
-			}
-			else if (format[1] != '\0')
-			{
-				written += _putchar('%');
-				written += _putchar(format[1]);
+				if (format[index + 1] == '%')
+				{
+					count += _putchar(format[index]);
+					index += 2;
+				}
+				else
+				{
+					variadic = get_func(format[index + 1]);
+					if (variadic)
+						count += variadic(args);
+					else
+						count = _putchar(format[index]) + _putchar(format[i + 1]);
+					index += 2;
+				}
 			}
 			else
 			{
-				written += _putchar('%');
-				break;
+				count += _putchar(format[index]);
+				index++;
 			}
-			format += 2;
 		}
-		else
-		{
-			written += _putchar(format[0]);
-			format++;
-		}
+		va_end(args);
+		return (count);
 	}
-	_putchar(-2);
-	return (written);
+	return (-1);
 }
