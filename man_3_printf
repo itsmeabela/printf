@@ -42,7 +42,7 @@ _printf("Integer: %d", integer); (or use "%i" for print integer, depends of the 
 printf(1), _printf(2), printf(3), sprintf(), snprintf(), vsprintf(), vsnprintf().
 
 .SH BUGS
-If there is a bug, report to danielgetaneh2011@gmail.com or alex@gmail.com
+If there is a bug, report to danielgetaneh2011@gmail.com or abelrobel7@gmail.com.
 
 .SH AUTHOR
 Daniel Getaneh & Abel Sintayehu - Students of ALX Africa.
