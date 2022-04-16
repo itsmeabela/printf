@@ -16,6 +16,7 @@ typedef struct specifier
 	int (*f)(va_list);
 } spec;
 
+int _putchar(char c);
 int (*get_func(char x))(va_list args);
 int _printf(const char *format, ...);
 int print_c(va_list args);
@@ -23,6 +24,10 @@ int print_s(va_list args);
 int print_d(va_list args);
 int print_i(va_list args);
 int print_percent(va_list args);
-int _putchar(char c);
+int print_b(va_list args);
+int print_u(va_list args);
+int print_o(va_list args);
+int print_x(va_list args);
+int print_X(va_list args);
 
 #endif
