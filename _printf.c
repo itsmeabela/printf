@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 					if (variadic)
 						count += variadic(args);
 					else
-						count = _putchar(format[index]) + _putchar(format[i + 1]);
+						count = _putchar(format[index]) + _putchar(format[index + 1]);
 					index += 2;
 				}
 			}
