@@ -1,7 +1,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
+main.h be "" wst nw ende mehonew#include "main.h"
 #include <stddef.h>
 /**
  * _printf - Recreates the printf function.
