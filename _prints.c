@@ -1,5 +1,5 @@
 #include "main.h"
-#inlcude <stdarg.h>
+#include <stdarg.h>
 
 /**
  * print_s - Prints a string.
