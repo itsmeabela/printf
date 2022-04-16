@@ -1,11 +1,11 @@
 .\" _Printf Project.
 .\"
-.TH man 1 "16 April 2022" "1.0" "_Printf Project man page"
+.TH man 1 "16 April 2022" "1.0" "_Printf Project"
 .SH NAME
 ._Printf
 \- This function produces output according to a format.
 .SH SYNOPSIS
-#include "holberton.h"
+#include "main.h"
 
 int _printf(const char *format, ...)
 
@@ -42,7 +42,7 @@ _printf("Integer: %d", integer); (or use "%i" for print integer, depends of the 
 printf(1), _printf(2), printf(3), sprintf(), snprintf(), vsprintf(), vsnprintf().
 
 .SH BUGS
-If there is a bug, report to 967@holbertonschool.com or 970@holbertonschool.com
+If there is a bug, report to danielgetaneh2011@gmail.com or alex@gmail.com
 
 .SH AUTHOR
 Daniel Getaneh & Abel Sintayehu - Students of ALX Africa.
