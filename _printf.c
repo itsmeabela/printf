@@ -1,90 +1,53 @@
 #include "main.h"
-#include <stdarg.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <stddef.h>
 
-int (*get_func(char x))(va_list);
-int _printf(const char *format, ...);
 /**
- * _printf - Produces output according to a format.
+ * _printf - prints formatted data to stdout.
  *
- * @format: A character String.
+ * @format: string that contains the format to print
+ * @...: length of character argument.
  *
- * Return: The number of characters printed(excluding the
- *          null byte used to end output to strings)
+ * Return: number of characters written
  */
-int _printf(const char *format, ...)
+int _printf(char *format, ...)
 {
-	if (format != NULL)
+	int written = 0, (*structype)(char *, va_list);
+	char q[3];
+	va_list pa;
+
+	if (format == NULL)
+		return (-1);
+	q[2] = '\0';
+	va_start(pa, format);
+	_putchar(-1);
+	while (format[0])
 	{
-		int count = 0, index = 0;
-		int (*variadic)(va_list);
-		va_list args;
-
-		va_start(args, format);
-		if (format[0] == '%' && format[1] == '\0')
-			return (-1);
-
-		while (format != NULL && format[index] != '\0')
+		if (format[0] == '%')
 		{
-			if (format[index] == '%')
+			structype = driver(format);
+			if (structype)
 			{
-				if (format[index + 1] == '%')
-				{
-					count += _putchar(format[index]);
-					index += 2;
-				}
-				else
-				{
-					variadic = get_func(format[index + 1]);
-
-					if (variadic)
-						count += variadic(args);
-					else
-						count = _putchar(format[index] + _putchar(format[index + 1]));
-					index += 2;
-				}
+				q[0] = '%';
+				q[1] = format[1];
+				written += structype(q, pa);
+			}
+			else if (format[1] != '\0')
+			{
+				written += _putchar('%');
+				written += _putchar(format[1]);
 			}
 			else
 			{
-				count += _putchar(format[index]);
-				index++;
+				written += _putchar('%');
+				break;
 			}
+			format += 2;
 		}
-		va_end(args);
-		return (count);
+		else
+		{
+			written += _putchar(format[0]);
+			format++;
+		}
 	}
-	return (-1);
-}
-
-/**
- * get_func - Look for the specifier.
- *
- * @x: Variable to the function.
- *
- * Return: value of the function.
- */
-int (*get_func(char x))(va_list)
-{
-	int index = 0;
-
-	spec array[] = {
-		{"c", print_c},
-		{"s", print_s},
-		{"%", print_percent},
-		{"d", print_d},
-		{"i", print_i},
-		{NULL, NULL}
-	};
-
-	while (array[index].valid)
-	{
-		if (x == array[index].valid[0])
-			return (array[index].f);
-
-		index++;
-	}
-
-	return (NULL);
+	_putchar(-2);
+	return (written);
 }
