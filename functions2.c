@@ -93,3 +93,25 @@ int print_X(va_list args)
 
 	return (count);
 }
+
+/**
+ * print_rev - Prints a string in reverse.
+ *
+ * @args: va_list with the string to print as the next element.
+ *
+ * Return: void.
+ */
+int print_rev(va_list args)
+{
+	char *str = va_arg(args, char *);
+	int length = _strlen(str) - 1, count = 0;
+
+	while (length >= 0)
+	{
+		_putchar(*(str + length));
+		length--;
+		count++;
+	}
+
+	return (count);
+}

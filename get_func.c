@@ -22,6 +22,7 @@ int (*get_func(char x))(va_list)
 		{"x", print_x},
 		{"X", print_X},
 		{"p", print_p},
+		{"r", print_rev},
 		{NULL, NULL}
 	};
 	while (arr[index].valid)
