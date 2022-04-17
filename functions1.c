@@ -29,11 +29,12 @@ int print_b(va_list args)
 	if (str == NULL)
 		return (-1);
 
-	for (; index < count + 1; index++)
+	for (; index < (count + 1); index++)
 	{
 		str[count - index] = deciNum % 2;
 		deciNum = deciNum / 2;
 	}
+
 	for (index = 0; index < count; index++)
 	{
 		retval = _putchar(str[index] + '0');
