@@ -100,12 +100,13 @@ int print_o(va_list args)
 	if (str == NULL)
 		return (-1);
 
-	for (; index < count + 1; index++)
+	for (; index < (count + 1); index++)
 	{
 		remainder = deciNum % 8;
 		deciNum = deciNum / 8;
-		str[count - 1] = remainder + '0';
+		str[count - index] = remainder + '0';
 	}
+
 	for (index = 0; index < count; index++)
 	{
 		retval = _putchar(str[index]);
