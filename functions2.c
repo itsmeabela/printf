@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * print_lowerHex - simultaneous convert and print integer in hexadecimal
- * @num: the number to print in hexadecimal
- * @count: pointer to counter of the number of bytes printed
+ * print_lowerHex - Simultaneous convert and print integer in hexadecimal.
+ *
+ * @num: The number to print in hexadecimal
+ * @count: Pointer to counter of the number of bytes printed
  *
  * Return: void
  */
@@ -47,9 +48,10 @@ int print_x(va_list args)
 }
 
 /**
- * print_upperHex - simultaneous convert and print integer in hexadecimal
- * @num: the number to print in hexadecimal
- * @count: pointer to counter of the number of bytes printed
+ * print_upperHex - Simultaneous convert and print integer in hexadecimal.
+ *
+ * @num: The number to print in hexadecimal.
+ * @count: Pointer to counter of the number of bytes printed.
  *
  * Return: void
  */
@@ -77,7 +79,7 @@ void print_upperHex(unsigned int num, int *count)
 }
 
 /**
- * print_X - Prints X.
+ * print_X - Prints an integer in lowercase hexadecimal.
  *
  * @args: The number of arguments.
  *
