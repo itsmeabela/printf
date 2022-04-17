@@ -35,4 +35,5 @@ int countDigits(unsigned int num);
 int countOctal(unsigned int num);
 int countBinary(unsigned int num);
 int print_number(unsigned int n);
+int _strlen(char *);
 #endif
