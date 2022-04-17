@@ -27,6 +27,8 @@ int print_percent(va_list args);
 int print_b(va_list args);
 int print_u(va_list args);
 int print_o(va_list args);
+int print_p(va_list args);
+void print_pointer(unsigned long ptr, int *count);
 int print_x(va_list args);
 void print_lowerHex(unsigned int num, int *count);
 int print_X(va_list args);
