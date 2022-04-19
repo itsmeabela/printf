@@ -92,7 +92,7 @@ int print_u(va_list args)
 int print_o(va_list args)
 {
 	unsigned int deciNum = va_arg(args, unsigned int), remainder;
-	int count = 0, index, retval;
+	int count = 0, index = 1, retval;
 	char *str;
 
 	count += countOctal(deciNum);
