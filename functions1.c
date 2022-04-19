@@ -104,7 +104,7 @@ int print_o(va_list args)
 	if (str == NULL)
 		return (-1);
 
-	for (index = 0; index < (count + 1); index++)
+	for (index = 1; index < (count + 1); index++)
 	{
 		remainder = deciNum % 8;
 		deciNum = deciNum / 8;
