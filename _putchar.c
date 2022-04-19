@@ -27,21 +27,3 @@ int _putchar(char c)
 
 	return (1);
 }
-
-/**
- * _puts - Prints a string to stdout.
- *
- * @str: Pointer to the string to print.
- *
- * Return: Number of chars written.
- */
-int _puts(char *str)
-{
-	register int index;
-
-	for (index = 0; str[index] != '\0'; index++)
-		_putchar(str[index]);
-
-	return (index);
-
-}
