@@ -16,11 +16,28 @@ typedef struct specifier
 	int (*f)(va_list);
 } spec;
 
+/**
+ * struct flags - Struct containing flags to turn on.
+ *
+ * @plus: Flag for +.
+ * @space: Flag for ' '.
+ * @hash: Flag for #.
+ */
+typedef struct flags
+{
+	int plus;
+	int space;
+	int hash;
+} flags_t;
+
 /* writes func */
 int _putchar(char c);
 
 /* gets the specifier */
 int (*get_func(char x))(va_list args);
+
+/* get flags */
+int get_flag(char s, flags_t *f);
 
 /* prints the main specifier of all */
 int _printf(const char *format, ...);
