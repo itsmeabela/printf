@@ -16,6 +16,23 @@ typedef struct specifier
 	int (*f)(va_list);
 } spec;
 
+/**
+ * struct tags - Format tags after %
+ * @spec: the specifier
+ * @length: the length
+ * @prec: the precision
+ * @width: the width
+ * @flags: the flags
+ */
+typedef struct tags
+{
+	char spec;
+	char length;
+	int prec;
+	int width;
+	char flags[6];
+} tags;
+
 /* writes func */
 int _putchar(char c);
 
@@ -58,5 +75,12 @@ int print_number(unsigned int n);
 
 /* prints the length of a string */
 int _strlen(char *);
+
+/* printf_flag_helper functions */
+int _isFlagMinus(tags *t);
+int _isFlagPlus(tags *t);
+int _isFlagSpace(tags *t);
+int _isFlagHashtag(tags *t);
+int _isFlagZero(tags *t);
 
 #endif
