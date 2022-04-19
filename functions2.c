@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
  * print_x - Prints hexadecimal.
@@ -27,7 +28,7 @@ int print_x(va_list args)
 		temp /= 16;
 	}
 
-	for (index = counter - 1; index >= 0; index--)
+	for (index = count - 1; index >= 0; index--)
 	{
 		if (arr[index] > 9)
 			arr[index] = arr[index] + 7;
