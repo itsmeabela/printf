@@ -7,7 +7,7 @@
  * @count: Pointer to counter of the number of bytes printed
  *
  * Return: void
- */
+ *
 
 void print_lowerHex(unsigned int num, int *count)
 {
@@ -30,14 +30,14 @@ void print_lowerHex(unsigned int num, int *count)
 	else
 		*count += retVal;
 }
-
+*/
 /**
  * print_x - Prints hexadecimal.
  *
  * @args: The number of arguments.
  *
  * Return: The specifier that is denoted by x.
- */
+ *
 int print_x(va_list args)
 {
 	int count;
@@ -46,7 +46,7 @@ int print_x(va_list args)
 
 	return (count);
 }
-
+*/
 /**
  * print_upperHex - Simultaneous convert and print integer in hexadecimal.
  *
@@ -55,7 +55,6 @@ int print_x(va_list args)
  *
  * Return: void
  */
-
 void print_upperHex(unsigned int num, int *count)
 {
 	int retVal;

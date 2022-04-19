@@ -90,7 +90,7 @@ int print_u(va_list args)
  * @args: The number of arguments.
  *
  * Return: The speciefer of o.
- *
+ */
 int print_o(va_list args)
 {
 	unsigned int deciNum = va_arg(args, unsigned int);
@@ -126,7 +126,7 @@ int print_o(va_list args)
 	free(str);
 	return (count);
 }
-*/
+
 /**
  * print_pointer - Convert and print an unsigned long int in hex.
  *
