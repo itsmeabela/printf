@@ -21,7 +21,7 @@ int (*get_func(char x))(va_list)
 		{"u", print_u},
 		{"o", print_o},
 		{"x", print_x},
-		/* {"X", print_X}, */
+		{"X", print_X},
 		{"p", print_p},
 		{"r", print_rev},
 		{"R", print_R},
