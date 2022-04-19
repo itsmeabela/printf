@@ -75,7 +75,9 @@ int print_u(va_list args)
 	retval = print_number(num);
 
 	if (retval == 1)
+	{
 		count += countDigits(digits);
+	}
 	else
 		count = -1;
 
@@ -91,7 +93,8 @@ int print_u(va_list args)
  */
 int print_o(va_list args)
 {
-	unsigned int deciNum = va_arg(args, unsigned int), remainder;
+	unsigned int deciNum = va_arg(args, unsigned int);
+	unsigned int remainder;
 	int count = 0, index = 1, retval;
 	char *str;
 
