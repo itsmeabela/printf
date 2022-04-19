@@ -12,7 +12,7 @@
  */
 int print_b(va_list args)
 {
-	int count = 0, index = 1, retval;
+	int count = 0, index, retval;
 	unsigned int deciNum = va_arg(args, unsigned int);
 	char *str;
 
@@ -29,7 +29,7 @@ int print_b(va_list args)
 	if (str == NULL)
 		return (-1);
 
-	for (; index < (count + 1); index++)
+	for (index = 1; index < (count + 1); index++)
 	{
 		str[count - index] = deciNum % 2;
 		deciNum = deciNum / 2;
@@ -92,7 +92,7 @@ int print_u(va_list args)
 int print_o(va_list args)
 {
 	unsigned int deciNum = va_arg(args, unsigned int), remainder;
-	int count = 0, index = 1, retval;
+	int count = 0, index, retval;
 	char *str;
 
 	count += countOctal(deciNum);
@@ -101,7 +101,7 @@ int print_o(va_list args)
 	if (str == NULL)
 		return (-1);
 
-	for (; index < (count + 1); index++)
+	for (index = 1; index < (count + 1); index++)
 	{
 		remainder = deciNum % 8;
 		deciNum = deciNum / 8;
