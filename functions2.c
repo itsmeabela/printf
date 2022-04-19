@@ -7,8 +7,7 @@
  * @count: Pointer to counter of the number of bytes printed
  *
  * Return: void
- *
-
+ */
 void print_lowerHex(unsigned int num, int *count)
 {
 	int retVal;
@@ -30,14 +29,14 @@ void print_lowerHex(unsigned int num, int *count)
 	else
 		*count += retVal;
 }
-*/
+
 /**
  * print_x - Prints hexadecimal.
  *
  * @args: The number of arguments.
  *
  * Return: The specifier that is denoted by x.
- *
+ */
 int print_x(va_list args)
 {
 	int count;
@@ -46,7 +45,7 @@ int print_x(va_list args)
 
 	return (count);
 }
-*/
+
 /**
  * print_upperHex - Simultaneous convert and print integer in hexadecimal.
  *
@@ -54,7 +53,7 @@ int print_x(va_list args)
  * @count: Pointer to counter of the number of bytes printed.
  *
  * Return: void
- */
+ *
 void print_upperHex(unsigned int num, int *count)
 {
 	int retVal;
@@ -76,14 +75,14 @@ void print_upperHex(unsigned int num, int *count)
 	else
 		*count += retVal;
 }
-
+*/
 /**
  * print_X - Prints an integer in lowercase hexadecimal.
  *
  * @args: The number of arguments.
  *
  * Return: The specifier that is denoted by X.
- */
+ *
 int print_X(va_list args)
 {
 	int count = 0;
@@ -92,7 +91,7 @@ int print_X(va_list args)
 
 	return (count);
 }
-
+*/
 /**
  * print_rev - Prints a string in reverse.
  *
