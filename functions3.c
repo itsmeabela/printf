@@ -13,16 +13,16 @@ int print_R(va_list args)
 	char *str = va_arg(args, char *), *encoded = NULL;
 	char *rot13 = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	char *alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	int index = 0, count = 0;
+	int index, count;
 
 	encoded = malloc(sizeof(char) * (_strlen(str) + 1));
 
 	if (!encoded || !str)
 		return (-1);
 
-	for (; str[count]; count++)
+	for (count = 0; str[count]; count++)
 	{
-		for (; index < 52; index++)
+		for (index = 0; index < 52; index++)
 		{
 			if (str[count] == alpha[index])
 			{
