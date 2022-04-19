@@ -10,20 +10,5 @@
  */
 int _putchar(char c)
 {
-	static char buf[1024];
-	static int index;
-
-	if (c == -1 || index >= 1024)
-	{
-		write(1, &buf, index);
-		index = 0;
-	}
-
-	if (c != -1)
-	{
-		buf[index] = c;
-		index++;
-	}
-
-	return (1);
+	return write(1, &c, 1);
 }

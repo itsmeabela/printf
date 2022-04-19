@@ -18,7 +18,6 @@ typedef struct specifier
 
 /* writes func */
 int _putchar(char c);
-int _puts(char *str);
 
 /* gets the specifier */
 int (*get_func(char x))(va_list args);
