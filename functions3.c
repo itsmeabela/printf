@@ -52,7 +52,7 @@ int print_R(va_list args)
  *
  * Return: 1 if a flag has been turned on, 0 othewise.
  */
-int get_flag(char s, fladgs_t *f)
+int get_flag(char s, flags_t *f)
 {
 	int index = 0;
 
